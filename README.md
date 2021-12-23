@@ -8,7 +8,7 @@ Install packages.
 ```
 conda create -n kd-mmclassification python=3.7 -y
 conda activate kd-mmclassification
-conda install pytorch==1.7.0 torchvision==0.8.1 cudatoolkit=11.0 -c pytorch -y
+conda install pytorch==1.7.0 torchvision==0.8.1 cudatoolkit==11.0 -c pytorch -y
 
 pip install mmcv-full==1.3.8 -f https://download.openmmlab.com/mmcv/dist/cu110/torch1.7.0/index.html
 
