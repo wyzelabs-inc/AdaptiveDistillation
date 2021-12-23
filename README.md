@@ -1,6 +1,6 @@
 
 # Adaptive Distillation
-This repository is the main source code for the [paper](https://arxiv.org/abs/2110.09674) titled: "Adaptive Distillation: Aggregating Knowledge from Multiple Paths for Efficient Distillation". This paper has been accepted to BMVC2021 for publication.
+This repository is the main source code for the [paper](https://arxiv.org/abs/2110.09674) titled: "Adaptive Distillation: Aggregating Knowledge from Multiple Paths for Efficient Distillation". This paper has been published in [BMVC2021](https://www.bmvc2021-virtualconference.com/conference/papers/paper_1528.html).
 
 To reproduce the experiments with CIFAR-100 dataset, please follow the instructions below:
 
@@ -8,12 +8,13 @@ Install packages.
 ```
 conda create -n kd-mmclassification python=3.7 -y
 conda activate kd-mmclassification
-conda install pytorch==1.7.0 torchvision==0.8.1 cudatoolkit=11.0 -c pytorch -y
+conda install pytorch==1.7.0 torchvision==0.8.1 cudatoolkit==11.0 -c pytorch -y
 
 pip install mmcv-full==1.3.8 -f https://download.openmmlab.com/mmcv/dist/cu110/torch1.7.0/index.html
 
 pip install -r requirements.txt
 ```
+Please note that, this repository is based on mmclassification package version `0.13.0`. Hence this particular version should be installed. Newer versions might work, but has not been tested.
 
 ## Running Experiments
 
