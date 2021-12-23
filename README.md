@@ -12,14 +12,7 @@ conda install pytorch==1.7.0 torchvision==0.8.1 cudatoolkit=11.0 -c pytorch -y
 
 pip install mmcv-full==1.3.8 -f https://download.openmmlab.com/mmcv/dist/cu110/torch1.7.0/index.html
 
-pip install -r requirements/docs.txt
-pip install -r requirements/mminstall.txt
-pip install -r requirements/optional.txt
-pip install -r requirements/readthedocs.txt
-pip install -r requirements/runtime.txt
-pip install -r requirements/tests.txt
-
-pip install -e .
+pip install -r requirements.txt
 ```
 
 ## Running Experiments

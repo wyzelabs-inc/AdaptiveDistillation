@@ -7,13 +7,13 @@ from mmcls.core import DistOptimizerHook
 from mmcls.utils import get_root_logger
 
 # TODO import eval hooks from mmcv and delete them from mmcls
-try:
-    from mmcv.runner.hooks import EvalHook, DistEvalHook
-except ImportError:
-    warnings.warn('DeprecationWarning: EvalHook and DistEvalHook from mmcls '
-                  'will be deprecated.'
-                  'Please install mmcv through master branch.')
-    from mmcls.core import EvalHook, DistEvalHook
+# try:
+#     from mmcv.runner.hooks import EvalHook, DistEvalHook
+# except ImportError:
+#     warnings.warn('DeprecationWarning: EvalHook and DistEvalHook from mmcls '
+#                   'will be deprecated.'
+#                   'Please install mmcv through master branch.')
+from adaptivedistillation.core import EvalHookAD, DistEvalHookAD
 
 # TODO import optimizer hook from mmcv and delete them from mmcls
 try:
@@ -128,7 +128,7 @@ def train_model(model,
             round_up=True)
         eval_cfg = cfg.get('evaluation', {})
         eval_cfg['by_epoch'] = cfg.runner['type'] != 'IterBasedRunner'
-        eval_hook = DistEvalHook if distributed else EvalHook
+        eval_hook = DistEvalHookAD if distributed else EvalHookAD
         runner.register_hook(eval_hook(val_dataloader, **eval_cfg))
 
     if cfg.resume_from:

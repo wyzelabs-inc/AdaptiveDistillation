@@ -10,8 +10,8 @@ from mmcv.parallel import MMDataParallel, MMDistributedDataParallel
 from mmcv.runner import get_dist_info, init_dist, load_checkpoint
 
 from adaptivedistillation.apis import multi_gpu_test, single_gpu_test
-from mmcls.datasets import build_dataloader, build_dataset
-from mmcls.models import build_classifier
+from adaptivedistillation.datasets import build_dataloader, build_dataset
+from adaptivedistillation.models import build_classifier
 
 # TODO import `wrap_fp16_model` from mmcv and delete them from mmcls
 try:

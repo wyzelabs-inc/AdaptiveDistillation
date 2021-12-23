@@ -4,5 +4,16 @@ _base_ = [
 ]
 
 norm_cfg = dict(type="SyncBN", requires_grad=True)
+model = dict(
+        type='ImageClassifierAD',
+        backbone=dict(
+            norm_cfg=norm_cfg,
+            out_indices=(0, 1, 2, 3)
+            ), 
+        head=dict(
+            type='LinearClsHeadKD', 
+            num_classes=100
+            )
+        )
 model = dict(backbone=dict(norm_cfg=norm_cfg, out_indices=(0, 1, 2, 3)), head=dict(num_classes=100))
 lr_config = dict(policy='step', step=[60, 120, 160], gamma=0.2)

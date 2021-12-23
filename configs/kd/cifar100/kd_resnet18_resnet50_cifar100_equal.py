@@ -35,5 +35,5 @@ model = dict(
         loss=dict(type='CrossEntropyLoss', loss_weight=1.0),
     ))
 lr_config = dict(policy='step', step=[60, 120, 160], gamma=0.2)
-evaluation = dict(interval=10, metric=['accuracy','agreement'])
+evaluation = dict(interval=1, metric=['accuracy','agreement'])
 checkpoint_config = dict(interval=40)

@@ -7,7 +7,8 @@ norm_cfg = dict(type="SyncBN", requires_grad=True)
 model = dict(
         type='ImageClassifierAD',
         backbone=dict(
-        out_indices=(0, 1, 2, 3)), 
+            out_indices=(0, 1, 2, 3)
+            ), 
         head=dict(
             type='LinearClsHeadKD', 
             num_classes=100
