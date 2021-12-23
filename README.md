@@ -1,6 +1,6 @@
 
 # Adaptive Distillation
-This repository is the main source code for the [paper](https://arxiv.org/abs/2110.09674) titled: "Adaptive Distillation: Aggregating Knowledge from Multiple Paths for Efficient Distillation". This paper has been accepted to BMVC2021 for publication.
+This repository is the main source code for the [paper](https://arxiv.org/abs/2110.09674) titled: "Adaptive Distillation: Aggregating Knowledge from Multiple Paths for Efficient Distillation". This paper has been published in [BMVC2021](https://www.bmvc2021-virtualconference.com/conference/papers/paper_1528.html).
 
 To reproduce the experiments with CIFAR-100 dataset, please follow the instructions below:
 
