@@ -21,6 +21,7 @@ pip install -r requirements/tests.txt
 
 pip install -e .
 ```
+Please note that, this repository is based on mmclassification package version `0.13.0`. Hence this particular version should be installed. Newer versions might work, but has not been tested.
 
 ## Running Experiments
 
